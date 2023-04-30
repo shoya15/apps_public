@@ -1,0 +1,16 @@
+<%= provide(:title, "プロフィールの詳細") %>
+<div class="wrapper">
+    <div class="detail-block">
+        <h4 class="headline-content">プロフィール内容</h4>
+        <% if @post.user.image.attached? %>
+            <%= image_tag @post.user.image%>
+        <% end %>
+        <p class="detail-content">ユーザー名：<%= @post.user.name %></p>
+        <p class="detail-content">自己紹介：<%= @post.user.purpose %></p>
+    </div>
+    <ul>
+        <% if @post.created_by?(current_user) %>
+            <li><%= button_to "プロフィールを更新する", edit_profile_path, method: :get, class: "change-button" %></li>
+        <% end %>
+    </ul>
+</div>

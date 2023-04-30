@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+body{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+
+    li{
+        list-style-type: none;
+    }
+
+    .header{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+
+        img{
+            width: 80px;
+        }
+    
+        .header-navlist{
+            display: flex;
+            padding-right: 20px;
+            
+            .header-navlink{
+                padding: 10px;
+                color: #000;
+                text-decoration: none;
+                font-size: 18px;
+                font-weight: bold;
+                border-bottom: 2px solid transparent;
+                transition: border-color .25s;
+            }
+            
+            .header-navlink:hover{
+                color: #000;
+                text-decoration: none;
+                border-bottom: 2px solid #333;
+            }
+        }
+    }
+
+    .notice{
+        background-color: #49ac49;
+        color: #fff;
+        text-align: center;
+        padding: 15px;
+        margin: 0 350px;
+    }
+    
+    .alert{
+        background-color: red;
+        color: #fff;
+        text-align: center;
+        padding: 15px;
+        margin: 0 350px;
+    }
+}
+
+@import "welcome";
+@import "posts";
+@import "users";
+@import "profiles";

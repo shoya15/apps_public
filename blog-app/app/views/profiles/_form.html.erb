@@ -1,0 +1,29 @@
+<%= form_with model: @profile, local: true do|f|%>
+    <% if @profile.errors.any? %>
+        <ul>
+        <% @profile.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+        <% end %>
+        </ul>
+    <% end %>
+    <table>
+        <tr>
+            <th>
+                <%= f.label "ユーザー名", for: "name" %>
+            </th>
+            <td>
+                <%= f.text_field :name, id: "name" %>
+            </td>
+        <tr>
+        <tr>
+            <th>
+                <%= f.label "目的", for: "purpose" %>
+            </th>
+            <td>
+                <%= f.text_field :purpose, id: "purpose" %>
+            </td>
+        <tr>
+    </table>
+    <%= f.file_field :image %>
+    <%= f.submit class: "button" %>
+<% end %>

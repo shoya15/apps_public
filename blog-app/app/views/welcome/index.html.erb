@@ -1,0 +1,23 @@
+<%= provide(:title, "一覧") %>
+<% @posts.each do|post| %>
+    <div class="content-block">
+        <div class="profile-wrapper">
+            <% if post.user.image.attached? %>
+                <%= image_tag post.user.image, class: "profile-img" %>
+            <% end %>
+            <div class="profile-block">
+                ユーザー名：<%= link_to post.user.name, post.user.profile, class: "detail-content" %>
+                <p class="detail-content">自己紹介：<%= post.user.name %></p>
+            </div>
+        </div>
+        <%= link_to "#{post.content}", post, class: "content" %>
+        <div>
+            <% if post.images.attached? %>
+                <% post.images.each do |image| %>
+                    <%= image_tag image%><br>
+                <% end %>
+            <% end %>
+        </div>
+    </div>
+<% end %>
+<%= paginate @posts %>

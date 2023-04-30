@@ -1,0 +1,20 @@
+<%= provide(:title, "詳細") %>
+<div class="wrapper">
+    <div class="detail-block">
+        <h4 class="headline-content">内容</h4>
+        <p class="detail-content"><%= @post.content %></p>
+        <div>
+            <% if @post.images.attached? %>
+                <% @post.images.each do |image| %>
+                    <%= image_tag image, class: "image"%><br>
+                <% end %>
+            <% end %>
+        </div>
+    </div>
+    <ul>
+        <% if @post.created_by?(current_user) %>
+            <li><%= button_to "ブログを編集する", edit_post_path, method: :get, class: "change-button" %></li>
+            <li><%= button_to "ブログを削除する", post_path, method: :delete, class: "change-button" %></li>
+        <% end %>
+    </ul>
+</div>

@@ -1,0 +1,21 @@
+<%= form_with model: @post, local: true do|f|%>
+    <% if @post.errors.any? %>
+        <ul>
+        <% @post.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+        <% end %>
+        </ul>
+    <% end %>
+    <table>
+        <tr>
+            <th>
+                <%= f.label "内容", for: "content" %>
+            </th>
+            <td>
+                <%= f.text_area :content, id: "content" %>
+            </td>
+        </tr>
+    </table>
+    <%= f.file_field :images, multiple: true %>
+    <%= f.submit class: "button" %>
+<% end %>

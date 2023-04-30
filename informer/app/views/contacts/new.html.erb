@@ -1,0 +1,26 @@
+<% provide(:title, "Contact") %>
+<h1 class="headline">Contact</h1>
+<body>
+    <p class="script_contact">改善してほしい点やご要望を記入してください。</p>
+    <%= form_with model: @contact, local: true, class: "form" do |f| %>
+        <% if @contact.errors.any? %>
+            <div class="alert alert-warning">
+                <ul>
+                <% @contact.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>
+                </ul>
+            </div>
+        <% end %>
+        <table class="form-table">
+            <tr> 
+                <td>
+                    <%= f.text_area :content, class: "textarea", cols:"20", rows:"15" %>
+                </td>
+            </tr>
+        </table>
+        <div class="form-submit">
+            <%= f.submit "送信", class:"button" %>
+        </div>
+    <% end %>
+</body>

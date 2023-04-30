@@ -1,0 +1,93 @@
+#profiles-new, #profiles-edit, #profiles-create, #profiles-update{
+    form{
+        margin: 20px 380px;
+        table{
+            margin-top: 120px;
+
+            label{
+                padding: 20px;
+            }
+
+            input{
+                width: 550px;
+                height: 30px;
+            }
+        }
+    }
+    #profile_image{
+        margin: 0 0px 20px 20px;
+    }
+    .button{
+        display: flex;
+        background-color: #fff;
+        transition: .25s;
+        border: 2px solid #000;
+        border-radius: 5px;
+        padding: 10px;
+        margin: auto;
+        min-width: 80px;
+        justify-content: center;
+    }
+    
+    .button:hover{
+        color: #fff;
+        background-color: #000;
+    }
+    
+    .label, .textarea, .button{
+        cursor: pointer;
+    }
+}
+
+#profiles-show{
+    .wrapper{
+        display: flex;
+        .detail-block{
+            border: 2px solid #000;
+            border-radius: 5px;
+            margin:30px 100px 0 200px;
+            width: 800px;
+            min-height: 500px;
+
+            .headline-content{
+                margin: 0;
+                padding: 20px;
+                text-align: center;
+                border-bottom: 2px solid #000;
+                background: #f5f5f5;
+            }
+
+            img{
+                margin: 10px 10px;
+                width: 40%;
+            }
+                
+            .detail-content{
+                margin: 0;
+                padding: 20px;
+            }
+
+            .image{
+                width: 80%;
+                margin: 0 0 10px 80px;
+            }
+        }
+        .change-button{
+            color: #000;
+            display: block;
+            background-color: #fff;
+            transition: .25s;
+            border: 2px solid #000;
+            border-radius: 5px;
+            margin-top: 30px;
+            padding: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .change-button:hover{
+            color: #fff;
+            background-color: #000;
+        }
+    }
+}
