@@ -40,3 +40,28 @@ https://sh-informer.com/posts/new
 
 #### 【インフラ】
 ・AWS
+
+## 画面遷移図
+<div align="center">
+  <img width="565" alt="画面遷移図" src="https://user-images.githubusercontent.com/107241111/235611139-f3c46f88-e263-411b-a768-d30eeb6a209b.png">
+</div>
+
+## 画面設計図
+<div align="center">
+  <img width="847" alt="画面設計図" src="https://user-images.githubusercontent.com/107241111/235612144-b2e847a5-5bc5-4395-baae-09922caaef39.png">
+</div>
+
+## フローチャート
+<div align="center">
+  <img width="706" alt="フローチャート" src="https://user-images.githubusercontent.com/107241111/235611350-ed4df7e2-1ec4-43c2-96a3-5619a49e1f4f.png">
+</div>
+
+## ER図
+<div align="center">
+  <img width="469" alt="ER図" src="https://user-images.githubusercontent.com/107241111/235611234-ee12a66b-29fb-44e8-826c-19d2874319f8.png">
+</div>
+
+## AWS構成図
+<div align="center">
+  <img width="1212" alt="AWS構成図" src="https://user-images.githubusercontent.com/107241111/235611269-90c52119-cdfc-4f27-b181-39f63d69d145.png">
+</div>
