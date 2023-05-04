@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+body{
+    font-family: 'Noto Sans JP', "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+    background-color: #fff;
+    padding: 50px;
+    
+    .header{
+        width: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+
+        .header-logo{
+            padding: 10px;
+        }
+
+        .header-navlist{
+            margin: 0;
+            display: flex;
+
+            .header-navlink{
+                display: block;
+                padding: 10px;
+                color: #000;
+                text-decoration: none;
+                font-weight: bold;
+                border-bottom: 2px solid transparent;
+                transition: border-color .25s;
+            }
+        
+            .header-navlink:hover{
+                border-bottom: 2px solid #333;
+            }
+        }
+
+        @media screen and (max-width: 768px){
+            .header{
+                font-size: 12px;
+            }
+        }
+    }
+}
+@import "posts";
+@import "welcome";
+@import "contacts";

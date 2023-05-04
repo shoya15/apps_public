@@ -1,47 +1,33 @@
 <% provide(:title, "Home") %>
 <body>
-    <p id="js-script_visible" class="script_home1">
-        読み上げるテキストと時間を設定してください
-    </p>
-    <p id="js-script_hidden1" class="script_home1">
-        設定しました
-    </p>
-    <%= form_with model: @post, local: true, class: "form" do |f| %>
-        <table class="form-table">
+    <p id="js-script_visible">読み上げるテキストと時間を設定してください</p>
+
+    <%# 最初は非表示 %>
+    <p id="js-script_hidden1">設定しました</p>
+    <p id="js-script_hidden2">設定したテキスト</p>
+    <p id="js-script_hidden3">設定した時間</p>
+
+    <%= form_with model: @post, local: true do |f| %>
+        <table>
             <tr> 
                 <th>
-                    <label id="js-label_text" class="label" for="name">
-                        テキスト
-                    </label>
+                    <%= f.label "テキスト", id: "js-label_text", for: "js-text" %>
                 </th>
                 <td>
-                    <%= f.text_field :content, id:"js-text", class:"input", value:"時間になりました", placeholder:"読み上げるテキストを入力してください" %>
+                    <%= f.text_field :content, id:"js-text", value:"時間になりました", placeholder:"読み上げるテキストを入力してください" %>
                 </td>
-                <p id="js-script_hidden2" class="script_home2">
-                    設定したテキスト
-                </p>
             </tr>
             <tr>
                 <th>
-                    <label id="js-label_time" class="label" for="name">
-                        時間
-                    </label>
+                    <%= f.label "時間", id: "js-label_time", for: "js-time" %>
                 </th>
                 <td>
-                    <%= f.time_field :end_time, id:"js-time", class:"input_time" %>
+                    <%= f.time_field :end_time, id:"js-time" %>
                 </td>
-                <p id="js-script_hidden3" class="script_home2">
-                    設定した時間
-                </p>
             </tr>
         </table>
-
-        <div class="form-button">
-            <%= f.button "設定", id:"js-button", class: "button"%>
-        </div>
+        <%= f.button "設定", id:"js-button" %>
     <% end %>
-    <div class="form-button">
-        <%= button_to "削除", root_path, method: :get, id:"js-reset", class: "button" %>
-    </div>
+    <%= button_to "削除", root_path, method: :get, id:"js-reset" %>
 </body>
 

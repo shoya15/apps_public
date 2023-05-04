@@ -1,0 +1,118 @@
+#posts-new{
+    #js-script_visible, #js-script_hidden1{
+        margin: 150px 0px 0px 0px;
+        font-size: 22px;
+        text-align: center;
+    }
+
+    #js-script_hidden2, #js-script_hidden3{
+        text-align: center;
+        font-size: 22px;
+    }
+
+    @media screen and (max-width: 768px){
+        #js-script_visible, #js-script_hidden1{
+                margin-top: 40px;
+                font-size: 12px;
+        }
+
+        #js-script_hidden2, #js-script_hidden3{
+            margin: auto;
+            font-size: 12px;
+        }
+    }
+
+    #js-script_hidden1, #js-script_hidden2, #js-script_hidden3{
+        display: none;
+    }
+
+    form{
+        margin: 10px 0px 0px 325px;
+
+        label, input, input[type=time], button{
+            cursor: pointer;
+        }
+
+        th{
+            text-align: right;
+
+            label{
+                padding: 10px;
+                font-size: 18px;
+            }
+        }
+
+        td{
+            padding: 10px;
+            text-align: center;
+
+            input{
+                border-radius: 5px;
+                margin: 0 15px;
+                padding: 10px;
+                border: 1px solid #ccc;
+                min-width: 500px;
+                min-height: 50px;
+                font-size: 20px;
+            }
+            
+            input[type=time]{
+                border-radius: 5px;
+                padding: 0px 25px 0px 25px;
+                margin: 10px 50px 10px 0px;
+                border: 1px solid #ccc;
+                min-width: 100px;
+                min-height: 50px;
+                font-size: 15px;
+                text-align: center;
+            }
+        }
+
+        button{
+            margin: 0 280px;
+            color: #000;
+            font-weight: bold;
+            background-color: transparent;
+            transition: background-color .25s;
+            border: 2px solid #000;
+            padding: 15px 50px;
+            border-radius: 5px;
+        }
+        
+        button:hover{
+            color: #fff;
+            background-color: #000;
+        }
+
+        #js-reset{
+            display: none;
+        }
+
+        @media screen and (max-width: 768px){
+            margin: auto;
+
+            th{
+                label{
+                    margin-left: 150px;
+                    font-size: 12px;
+                    font-weight: lighter;
+                }
+            }
+
+            td{
+                input, input[type=time]{
+                    min-width: auto;
+                    min-height: auto;
+                    font-size: 12px;
+                    font-weight: lighter;
+                }
+            }
+
+            button{
+                padding: 3px 5px;
+                font-size: 12px;
+                font-weight: lighter;
+            }
+        }
+    }
+}

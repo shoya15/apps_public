@@ -1,0 +1,48 @@
+#welcome-about{
+    @media screen and (max-width: 768px){
+        .script_about{
+            text-align: left;
+            font-size: 12px;
+        }
+    
+        .headline{
+            margin-top: 40px;
+            font-size: 15px;
+        }
+    }
+}
+
+#welcome-complete{
+    .script_complete{
+        margin: 200px 0px 10px 0px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .back_home_center{
+        text-align: center;
+    }
+    
+    .back_home{
+        cursor: pointer;
+        margin: 0 auto;
+        font-size: 20px;
+        text-decoration: none;
+        transition: color .25s;
+    }
+
+    .back_home:hover{
+        color: red;
+    }
+
+    @media screen and (max-width: 768px){
+        .headline, .script_complete{
+                margin-top: 40px;
+                font-size: 12px;
+        }
+
+        .back_home{
+            font-size: 12px;
+        }
+    }
+}

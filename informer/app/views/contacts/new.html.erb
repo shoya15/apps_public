@@ -2,9 +2,9 @@
 <h1 class="headline">Contact</h1>
 <body>
     <p class="script_contact">改善してほしい点やご要望を記入してください。</p>
-    <%= form_with model: @contact, local: true, class: "form" do |f| %>
+    <%= form_with model: @contact, local: true do |f| %>
         <% if @contact.errors.any? %>
-            <div class="alert alert-warning">
+            <div>
                 <ul>
                 <% @contact.errors.full_messages.each do |message| %>
                     <li><%= message %></li>
@@ -12,15 +12,13 @@
                 </ul>
             </div>
         <% end %>
-        <table class="form-table">
+        <table>
             <tr> 
                 <td>
-                    <%= f.text_area :content, class: "textarea", cols:"20", rows:"15" %>
+                    <%= f.text_area :content, cols:"20", rows:"15" %>
                 </td>
             </tr>
         </table>
-        <div class="form-submit">
-            <%= f.submit "送信", class:"button" %>
-        </div>
+        <%= f.submit "送信" %>
     <% end %>
 </body>

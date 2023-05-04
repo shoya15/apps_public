@@ -25,19 +25,19 @@
     <meta name="theme-color" content="#ffffff">
   </head>
 
-  <body>
+  <body id="<%= controller.controller_name %>-<%= controller.action_name %>">
     <header class="header">
         <div class="header-logo">
             <%= link_to image_tag("logo.png") ,root_path %>
         </div>
-        <nav class="header-nav">
+        <nav>
             <ul class="header-navlist">
-                <li class="header-navitem"><%= link_to "ABOUT", about_path, class: "header-navlink" %></li>
-                <li class="header-navitem"><%= link_to "CONTACT", new_contacts_path, class: "header-navlink" %></li>
+                <li><%= link_to "ABOUT", about_path, class: "header-navlink" %></li>
+                <li><%= link_to "CONTACT", new_contacts_path, class: "header-navlink" %></li>
             </ul>
         </nav>
     </header>
-    <p class="alert"><%= alert %></p>
+    <p><%= alert %></p>
     <%= yield %>
     <%= javascript_importmap_tags "application" %>
   </body>

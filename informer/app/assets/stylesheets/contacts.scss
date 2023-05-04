@@ -1,0 +1,66 @@
+#contacts-new{
+    @media screen and (max-width: 768px){
+        .script_contact{
+            font-size: 12px;
+        }
+
+        .headline{
+            margin-top: 40px;
+            font-size: 15px;
+        }
+    }
+
+    form{
+        margin: 10px 0px 0px 325px;
+
+        td{
+            padding: 10px;
+            text-align: center;
+
+            textarea{
+                cursor: pointer;
+                border-radius: 5px;
+                padding: 10px;
+                margin-left: 90px;
+                border: 1px solid #ccc;
+                min-width: 500px;
+            }
+        }
+
+        input[type=submit]{
+            cursor: pointer;
+            margin: 0 280px;
+            color: #000;
+            font-weight: bold;
+            background-color: transparent;
+            transition: background-color .25s;
+            border: 2px solid #000;
+            padding: 15px 50px;
+            border-radius: 5px;
+        }
+
+        input[type=submit]:hover{
+            color: #fff;
+            background-color: #000;
+        }
+
+        @media screen and (max-width: 768px){
+            margin: auto;
+
+            tr{
+                textarea{
+                    margin-left: 150px;
+                    min-width: 300px;
+                    max-height: 150px;
+                    font-size: 10px;
+                }
+            }
+
+            input[type=submit]{
+                padding: 3px 5px;
+                font-size: 12px;
+                font-weight: lighter;
+            }
+        }
+    }
+}
